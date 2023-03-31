@@ -14,7 +14,7 @@ function AddCategory() {
       <section>
         <Container>
             <Title title={"اضف تصنيف جديد "}/>
-            <Form className="w-50" onSubmit={"OnSubmit"}>
+            <Form  onSubmit={"OnSubmit"}>
 
             <Form.Group className="mb-3" controlId="name">
             <div className="text-muted pb-2">صوره التصنيف</div>

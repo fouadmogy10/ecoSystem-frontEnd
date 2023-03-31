@@ -11,7 +11,7 @@ function AddSubCategory() {
     <section>
       <Container>
           <Title title={"اضف التصنيف الفرعي "}/>
-          <Form className="w-50" onSubmit={"OnSubmit"}>
+          <Form  onSubmit={"OnSubmit"}>
 
          
            
