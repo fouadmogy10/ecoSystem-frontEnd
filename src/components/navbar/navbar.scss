@@ -1,0 +1,266 @@
+$base-color: #343A40;
+$purp-color: #80ae00;
+$yel-color: #FFC107;
+$gray-color: #E1E8EB;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+.navbar {
+    padding: 10px 0px;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0;
+        .logo {
+            a {
+                color: $base-color;
+                width: 20%;
+                font-size: 22px;
+                font-weight: 400;
+                text-transform: capitalize;
+                text-decoration: none;
+                @media only screen and (max-width: 600px) {
+                    width: 50%;
+                }
+            }
+        }
+        .search_over {
+            flex: 2;
+            margin: 0 23px;
+            &.active{
+                transform: scale(1);
+            }
+            @media only screen and (max-width: $md) {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: #000000, $alpha: 0.5);
+                z-index: 9999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: scale(0);
+                transition: all 0.2s linear;
+            }
+            .toggle-close{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 10px;
+                font-size: 30px;
+                cursor: pointer;
+                color: #fff;
+                background: none;
+                border: none;
+                outline: none;
+                @media only screen and (max-width: $md) {
+                    display: block;
+                }
+            }
+            .search-box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                @media only screen and (max-width: $md) {
+                    width: 90%;
+                }
+                .search {
+                    width: 100%;
+                    
+                    height: 30px;
+                    border: 1.5px solid $base-color;
+                    border-radius: 8px;
+                    padding-left: 10px;
+                    font-size: 14px;
+                    color: $base-color;
+                    @media only screen and (max-width: $md) {
+                        height: 45px;
+                        width: 100%;
+                        border: 3px solid $base-color;
+                    }
+                }
+                .search_key_cont {
+                    position: absolute;
+                    top: 102%;
+                    left: 0;
+                    width: 100%;
+                    z-index: 9999;
+                    background-color: $gray-color;
+                    border-radius: 5px;
+                    padding: 5px;
+                    a{
+                        display: block;
+                        color: $base-color;
+                        text-decoration: none;
+                        padding: 3px 5px;
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
+                }
+                .search-btn {
+                    position: absolute;
+                    left: -8px;
+                    top: 4%;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    margin: 0px 15px;
+                    font-size: 15px;
+                    color: #343A40;
+                    cursor: pointer;
+                    cursor: pointer;
+                    @media only screen and (max-width: $md) {
+                        left: -5px;
+                        top: 20%;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+        .options {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            width: 20%;
+            button {
+                background: none;
+                border: none;
+                outline: none;
+                margin: 0px 15px;
+                font-size: 24px;
+                color: $base-color;
+                cursor: pointer;
+                &.search-tog {
+                    display: none;
+                    @media only screen and (max-width: $sm) {
+                        display: block;
+                    }
+                }
+                &.shop-cart {
+                    position: relative;
+                    .cart-count {
+                        position: absolute;
+                        top: -5px;
+                        left: -12px;
+                        color: #fff;
+                        min-width: 15px;
+                        background-color: #80ae00;
+                        min-height: 15px;
+                        display: block;
+                        border-radius: 50%;
+                        font-size: 14px;
+                        padding: 2px 6px;
+                    }
+                }
+            }
+            .shop-fav {
+                background: none;
+                border: none;
+                outline: none;
+                margin: 0px 15px;
+                font-size: 24px;
+                color: $base-color;
+                text-decoration: none;
+            }
+            .profile_menu {
+                position: relative;
+                img{
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-left: 15px;
+                }
+                .dorp_down_menu {
+                    display: none;
+                    position: absolute;
+                    top: 140%;
+                    left: -2%;
+                    z-index: 999;
+                    padding: 20px;
+                    border-radius: 5px;
+                    background: #fff;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                    ul {
+                        list-style: none;
+                        margin-bottom: 8px;
+                        li {
+                            a {
+                                background-color: transparent;
+                                color: $base-color;
+                                text-decoration: none;
+                                text-align: center;
+                                display: block;
+                                padding: 10px 50px;
+                                white-space: nowrap;
+                                font-size: 18px;
+                                font-weight: 400;
+                                transition: all 0.2s linear;
+                                border-left: 4px solid transparent;
+                                &:hover {
+                                    color: $purp-color;
+                                    border-left-color:  $purp-color;
+                                }
+                            }
+                        }
+                    }
+                    hr {
+                        background: $gray-color;
+                        height: 1px;
+                        border: none;
+                    }
+                    .login {
+                        background-color: $purp-color;
+                        color: #fff !important;
+                        text-decoration: none;
+                        margin: 0 auto;
+                        display: block;
+                        margin-top: 20px;
+                        text-align: center;
+                        padding: 10px;
+                        border-radius: 5px;
+                        text-transform: capitalize;
+                    }
+                    .logout_user{
+                        background-color: rgb(248, 38, 38);
+                        color: #fff;
+                        text-decoration: none;
+                        margin: 0 auto;
+                        display: block;
+                        margin-top: 20px;
+                        text-align: center;
+                        padding: 5px;
+                        border-radius: 5px;
+                        text-transform: capitalize;
+                        font-size: 18px;
+                        font-weight: 400;
+                        width: 80%;
+                    }
+                    &::before {
+                        content: "";
+                        width: 41px;
+                        height: 0px;
+                        border-left: 35px solid transparent;
+                        border-left: 40px solid transparent;
+                        border-bottom: 16px solid white;
+                        position: absolute;
+                        bottom: 100%;
+                        left: 4px;
+                        filter: drop-shadow(0px -8px 4px rgba(0, 0, 0, 0.2));
+                    }
+                }
+                &:hover {
+                    .dorp_down_menu {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
