@@ -27,9 +27,9 @@ function AddProduct() {
       <section>
         <Container>
         <div>
-            <Row className="justify-content-start w-50">
+            <Row className="justify-content-center w-75">
                <Title title={"اضافه منتج جديد"}/>
-                <Col sm="8">
+                <Col sm="12">
                     <div className="text-form pb-2"> صور للمنتج</div>
                     <label htmlFor="avatar">
 
